@@ -11,7 +11,7 @@ class GenericWebScraper:
         try:
             r = urllib.request.urlopen(self.site)
             html = r.read().decode('utf-8')
-            soup = BeautifulSoup(html, "html.parser")
+            soup = BeautifulSoup(html, "html")
 
             tables = soup.find_all('table', {'class': 'wikitable'})  # Find ALL tables
 
